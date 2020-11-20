@@ -1,5 +1,5 @@
 {
-  "npmScope": "angular-workshop",
+  "npmScope": "alten",
   "affected": {
     "defaultBase": "master"
   },
@@ -22,5 +22,12 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "demo-app": {
+      "tags": []
+    },
+    "apis-people": {
+      "tags": []
+    }
+  }
 }

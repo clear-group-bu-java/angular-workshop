@@ -1,0 +1,322 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "people",
+    "version": "1.0",
+    "contact": {
+      "name": "Marc Remolt",
+      "url": "https://www.alten-engineering.de/"
+    },
+    "license": {
+      "name": "MIT"
+    },
+    "description": "Fake API for workshop"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/people": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [
+          "people"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Person"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-people",
+        "description": "Get all people",
+        "parameters": []
+      },
+      "post": {
+        "summary": "",
+        "tags": [
+          "people"
+        ],
+        "operationId": "post-people",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Person"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Person"
+              }
+            }
+          }
+        },
+        "description": "API for the workshop"
+      }
+    },
+    "/people/{id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "id",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [
+          "people"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Person"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-people-id",
+        "description": "Get one Person"
+      },
+      "put": {
+        "summary": "",
+        "tags": [
+          "people"
+        ],
+        "operationId": "put-people-id",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Person"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Person"
+              }
+            }
+          }
+        },
+        "description": "Update a Person"
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-people-id",
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "description": "Delete a person",
+        "tags": [
+          "people"
+        ]
+      }
+    },
+    "/addresses": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [
+          "addresses"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Address"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-addresses",
+        "description": "Return list of addresses"
+      }
+    },
+    "/addresses/{id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "id",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Address"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-addresses-id",
+        "description": "Return a single Address by ID",
+        "tags": [
+          "addresses"
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Person": {
+        "title": "Person",
+        "type": "object",
+        "x-examples": {
+          "example-1": {
+            "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+            "firstName": "string",
+            "lastName": "string",
+            "email": "user@example.com",
+            "birthDate": "2019-08-24",
+            "": {
+              "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+              "street": "string",
+              "postcode": "string",
+              "city": "string"
+            }
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "firstName": {
+            "type": "string",
+            "minLength": 1,
+            "x-faker": "name.firstName"
+          },
+          "lastName": {
+            "type": "string",
+            "minLength": 1,
+            "x-faker": "name.lastName"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "x-faker": "internet.email"
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "cv": {
+            "type": "string",
+            "default": "",
+            "x-faker": "lorem.paragraphs"
+          }
+        },
+        "required": [
+          "firstName",
+          "lastName",
+          "email",
+          "cv"
+        ]
+      },
+      "Address": {
+        "title": "Address",
+        "type": "object",
+        "x-examples": {},
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "street": {
+            "type": "string",
+            "x-faker": "address.streetName",
+            "minLength": 1
+          },
+          "number": {
+            "type": "string",
+            "x-faker": "random.number"
+          },
+          "city": {
+            "$ref": "#/components/schemas/City"
+          }
+        },
+        "required": [
+          "street",
+          "number",
+          "city"
+        ]
+      },
+      "City": {
+        "title": "City",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "x-faker": "address.city"
+          },
+          "zipCode": {
+            "type": "string",
+            "x-faker": "address.zipCode"
+          }
+        },
+        "required": [
+          "name",
+          "zipCode"
+        ]
+      }
+    },
+    "securitySchemes": {}
+  },
+  "tags": [
+    {
+      "name": "people"
+    },
+    {
+      "name": "addresses"
+    }
+  ]
+}

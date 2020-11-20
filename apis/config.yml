@@ -1,0 +1,7 @@
+additionalProperties:
+  fileNaming: 'kebab-case'
+  modelFileSuffix: '.dto'
+  modelSuffix: 'Dto'
+  ngVersion: '11.0.0'
+  providedInRoot: true
+  supportsES6: true

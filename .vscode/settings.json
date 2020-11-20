@@ -1,0 +1,11 @@
+{
+  "cSpell.language": "en,de",
+  "files.autoSave": "onFocusChange",
+  "typescript.locale": "en",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "typescript.tsdk": "node_modules\\typescript\\lib"
+}
