@@ -12,6 +12,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
+import { PerformanceDemoComponent } from './performance-demo/performance-demo.component';
+import { PerformanceDemoModule } from './performance-demo/performance-demo.module';
 
 const APP_ROUTES: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -27,6 +29,7 @@ const APP_ROUTES: Routes = [
         (m) => m.PeopleViewsAddressModule
       ),
   },
+  { path: 'performance', component: PerformanceDemoComponent },
 ];
 @NgModule({
   declarations: [AppComponent],
@@ -52,6 +55,7 @@ const APP_ROUTES: Routes = [
     MatToolbarModule,
 
     PeopleDataAddressModule,
+    PerformanceDemoModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

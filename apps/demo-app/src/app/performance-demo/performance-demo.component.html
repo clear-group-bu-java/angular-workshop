@@ -1,0 +1,31 @@
+<div>
+  <button mat-flat-button color="primary" (click)="addOne()">add item</button>
+  <button mat-flat-button color="primary" (click)="shuffle()">
+    shuffle items
+  </button>
+
+  <button mat-flat-button color="primary" (click)="changeIds()">
+    change ids
+  </button>
+
+  <button mat-flat-button color="primary" (click)="changeIdsCorrect()">
+    change ids (correct)
+  </button>
+</div>
+
+<app-demo-cell *ngFor="let item of items" [item]="item"></app-demo-cell>
+
+<div>
+  <button mat-flat-button color="primary" (click)="addOne()">add item</button>
+  <button mat-flat-button color="primary" (click)="shuffle()">
+    shuffle items
+  </button>
+
+  <button mat-flat-button color="primary" (click)="changeIds()">
+    change ids
+  </button>
+
+  <button mat-flat-button color="primary" (click)="changeIdsCorrect()">
+    change ids (correct)
+  </button>
+</div>
