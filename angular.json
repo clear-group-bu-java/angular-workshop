@@ -19,7 +19,7 @@
             "index": "apps/demo-app/src/index.html",
             "main": "apps/demo-app/src/main.ts",
             "polyfills": "apps/demo-app/src/polyfills.ts",
-            "tsconfig": "apps/demo-app/tsconfig.app.json",
+            "tsConfig": "apps/demo-app/tsconfig.app.json",
             "aot": true,
             "assets": [
               "apps/demo-app/src/favicon.ico",
