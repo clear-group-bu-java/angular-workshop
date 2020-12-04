@@ -1,98 +1,33 @@
-# AngularWorkshop
+# Angular Workshop
 
-This project was generated using [Nx](https://nx.dev).
+### Vorab installierte Software
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+- NodeJS (https://nodejs.org/en/): bitte aktuelle LTS Version 14.x installieren
+- VSCode (https://code.visualstudio.com/): Fragen zu / Probleme bei anderen IDEs werden im Workshop nicht beantwortet :)
+  - Wenn das unten genannte Projekt zum ersten Mal in VSCode geöffnet wird, schlägt es die Installation diverser PLugins vor - bitte "Ja" sagen
+- Stoplight Studio (https://stoplight.io/studio/): Verwenden wir zur Verwaltung der OpenAPI Spec
+- Ein vernünftiges Terminal, vorzugsweise mit Tabs, alternativ das Terminal in VSCode. Wir werden mehrere Tabs offen haben.
+- Aktueller Chrome und/oder aktueller Edge (Chromium Edge)
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+## Installation
 
-## Quick Start & Documentation
+- Git Repo auschecken
+- im ausgecheckten Ordner
+  - `npm install`
+  - `nx serve`
+  - `npm run api:people:serve`
+  - http://localhost:4200/ im Browser öffnen
+  - Prüfen ob die Anwendung läuft und Daten angezeigt werden (Navigation: Adressen)
+  - Bitte nicht verunsichern lassen, die gestartete fake API ignoriert was man ihr schickt und liefert zufällige Werte zurück. Falls jemand versucht eine Adresse anzulegen ...
 
-[Nx Documentation](https://nx.dev/angular)
+## Vorwissen
 
-[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
+Bitte die folgenden Bibliotheken/ Tools / konzepte vor dem Workshop ansehen.
+Sofern nichts anderes angegeben, sollten ihr zumindest wissen, worum es sich dabei handelt und wofür man es braucht.
 
-[Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
-
-## Adding capabilities to your workspace
-
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
-
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
-
-Below are our core plugins:
-
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
-
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
-
-## Generate an application
-
-Run `ng g @nrwl/angular:app my-app` to generate an application.
-
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
-
-## Generate a library
-
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are sharable across libraries and applications. They can be imported from `@angular-workshop/mylib`.
-
-## Development server
-
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng g component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
-
-## ☁ Nx Cloud
-
-### Computation Memoization in the Cloud
-
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+- https://ngrx.io/ Zentrale Bibliothek, die wir für die Datenschicht verwenden. Wer damit noch gar nicht gearbeitet hat, bitte zumindest das Tutorial unter https://ngrx.io/guide/store durcharbeiten (Leere ng app, Installation von NGRX, dann Tutorial).
+  - Wer ngrx schon beherrscht, kann sich gerne noch optional https://immerjs.github.io/immer/docs/introduction ansehen.
+- https://angular.io/guide/router wir werden im Workshop einige fortgeschrittene Funktionen des Angular Routers besprechen. Grundlagen wie eine Route mit Komponente anlegen oder Links im Template werden vorausgesetzt.
+- https://nx.dev/ Statt der reinen @angular/cli verwenden wir NX zur Verwaltung des Monorepos. Bitte https://nx.dev/latest/angular/cli/overview durchlesen, die NX CLI installieren und die wichtigsten Kommendos ansehen.
+- OpenAPI Spec: Einen grober Überblick, was das eigentlich ist wäre gut. Gute Intro: https://medium.com/@amirm.lavasani/restful-apis-tutorial-of-openapi-specification-eeada0e3901d
+- https://material.angular.io/ wir werden uns nicht groß um Komponenten Bibliotheken kümmern, sondern uns auf die Datenschicht und Architektur konzentrieren. Um überhaupt etwas vernünftig anzeigen zu können (Navi, Tabellen, Formulare ...) verwenden wir Angular Material.
