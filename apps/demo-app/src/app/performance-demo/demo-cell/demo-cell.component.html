@@ -1,0 +1,9 @@
+<div
+  *ngIf="item"
+  (click)="notify()"
+  (mouseenter)="mouseenter()"
+  (mouseleave)="mouseleave()"
+>
+  Item {{ item?.id }}
+</div>
+{{ flash() }}

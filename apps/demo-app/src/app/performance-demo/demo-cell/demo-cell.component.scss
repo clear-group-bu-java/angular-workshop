@@ -1,0 +1,15 @@
+:host {
+  display: inline-block;
+}
+
+div {
+  width: 70px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid red;
+  text-align: center;
+}
+
+.touched {
+  background-color: yellow;
+}

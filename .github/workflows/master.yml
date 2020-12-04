@@ -6,7 +6,7 @@ name: Node.js CI
 on:
   push:
     branches: [ master ]
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,6 +22,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm run affected:lint -- --all
-    - run: npm run affected:test -- --all
-    - run: npm run affected:build -- --prod --all
+    - run: npm run affected:lint -- --all --parallel
+    - run: npm run affected:test -- --all --parallel
+    - run: npm run affected:build -- --prod --all --parallel
