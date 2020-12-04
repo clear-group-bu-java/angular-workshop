@@ -19,7 +19,7 @@
             "index": "apps/demo-app/src/index.html",
             "main": "apps/demo-app/src/main.ts",
             "polyfills": "apps/demo-app/src/polyfills.ts",
-            "tsConfig": "apps/demo-app/tsconfig.app.json",
+            "tsconfig": "apps/demo-app/tsconfig.app.json",
             "aot": true,
             "assets": [
               "apps/demo-app/src/favicon.ico",
@@ -121,6 +121,110 @@
           "style": "scss"
         }
       }
+    },
+    "people-data-address": {
+      "projectType": "library",
+      "root": "libs/people/data/address",
+      "sourceRoot": "libs/people/data/address/src",
+      "prefix": "alten",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/people/data/address/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/people/data/address/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "core": {
+      "projectType": "library",
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "prefix": "alten",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "people-views-address": {
+      "projectType": "library",
+      "root": "libs/people/views/address",
+      "sourceRoot": "libs/people/views/address/src",
+      "prefix": "alten",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/people/views/address/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/people/views/address/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "views-home": {
+      "projectType": "library",
+      "root": "libs/views/home",
+      "sourceRoot": "libs/views/home/src",
+      "prefix": "alten",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/views/home/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/views/home/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
@@ -141,6 +245,11 @@
       "style": "scss",
       "linter": "eslint",
       "strict": true
+    },
+    "@ngrx/schematics:feature": {
+      "api": true,
+      "creators": true,
+      "flat": false
     }
   },
   "defaultProject": "demo-app"

@@ -1,9 +1,13 @@
-<header class="flex">
+<mat-toolbar color="primary">
+  <span>{{ title }}</span>
 
-  <h1>Welcome to {{ title }}!</h1>
-</header>
-<main>
-  Hello World
-</main>
+  <a mat-button [routerLink]="['/']"><mat-icon>home</mat-icon> Home</a>
+  <a mat-button [routerLink]="['/addresses']">
+    <mat-icon>location_on</mat-icon>
+    Addresses
+  </a>
+</mat-toolbar>
 
-<router-outlet></router-outlet>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

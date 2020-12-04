@@ -1,0 +1,16 @@
+.gitignore
+.openapi-generator-ignore
+README.md
+api.module.ts
+api/addresses.service.ts
+api/api.ts
+api/people.service.ts
+configuration.ts
+encoder.ts
+git_push.sh
+index.ts
+model/address.dto.ts
+model/city.dto.ts
+model/models.ts
+model/person.dto.ts
+variables.ts

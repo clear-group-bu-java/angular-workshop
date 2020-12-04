@@ -28,6 +28,18 @@
     },
     "apis-people": {
       "tags": []
+    },
+    "people-data-address": {
+      "tags": []
+    },
+    "core": {
+      "tags": []
+    },
+    "people-views-address": {
+      "tags": []
+    },
+    "views-home": {
+      "tags": []
     }
   }
 }

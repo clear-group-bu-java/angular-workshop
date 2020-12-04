@@ -1,0 +1,58 @@
+<h1>Listing Addresses</h1>
+
+<div class="toolbar">
+  <a mat-flat-button color="primary" [routerLink]="['/addresses', 'new']">
+    <mat-icon>delete</mat-icon>
+    Add new Address
+  </a>
+</div>
+
+<table mat-table [dataSource]="addressFacade.collection$ | ngrxPush">
+  <ng-container matColumnDef="street">
+    <th mat-header-cell *matHeaderCellDef>Street</th>
+    <td mat-cell *matCellDef="let address">{{ address.street }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="number">
+    <th mat-header-cell *matHeaderCellDef>Number</th>
+    <td mat-cell *matCellDef="let address">{{ address.number }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="zipCode">
+    <th mat-header-cell *matHeaderCellDef>Zip code</th>
+    <td mat-cell *matCellDef="let address">{{ address.city.zipCode }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="city">
+    <th mat-header-cell *matHeaderCellDef>City</th>
+    <td mat-cell *matCellDef="let address">{{ address.city.name }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>&nbsp;</th>
+    <td class="actions" mat-cell *matCellDef="let address">
+      <button mat-icon-button>
+        <a mat-icon-button [routerLink]="['/addresses', address.id, 'edit']"
+          ><mat-icon>edit</mat-icon></a
+        >
+      </button>
+      <button
+        mat-icon-button
+        color="warn"
+        (click)="addressFacade.delete(address.id)"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let addresses; columns: columnsToDisplay"></tr>
+</table>
+
+<div class="toolbar">
+  <a mat-flat-button color="primary" [routerLink]="['/addresses', 'new']">
+    <mat-icon>delete</mat-icon>
+    Add new Address
+  </a>
+</div>

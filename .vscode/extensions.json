@@ -11,6 +11,7 @@
     "editorconfig.editorconfig",
     "eamodio.gitlens",
     "dbaeumer.vscode-eslint",
-    "coenraads.bracket-pair-colorizer"
+    "coenraads.bracket-pair-colorizer",
+    "christian-kohler.npm-intellisense"
   ]
 }

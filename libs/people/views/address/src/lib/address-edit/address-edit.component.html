@@ -1,0 +1,6 @@
+<h1>Edit Address</h1>
+
+<alten-address-form
+  [address]="addressFacade.selectedEntity$ | ngrxPush"
+  (submitForm)="save($event)"
+></alten-address-form>
