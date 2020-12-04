@@ -250,6 +250,10 @@
             "type": "string",
             "default": "",
             "x-faker": "lorem.paragraphs"
+          },
+          "addressId": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "required": [

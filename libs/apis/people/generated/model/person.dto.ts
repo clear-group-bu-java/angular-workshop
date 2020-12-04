@@ -18,5 +18,6 @@ export interface PersonDto {
     email: string;
     birthDate?: string;
     cv: string;
+    addressId?: string;
 }
 
