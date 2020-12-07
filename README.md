@@ -14,7 +14,7 @@
 - Git Repo auschecken
 - im ausgecheckten Ordner
   - `npm install`
-  - `nx serve`
+  - `nx serve` (bei mir (Tobias) hat nur `npm run nx serve` funktioniert. Aber ich habe auch keine Ahnung davon)
   - `npm run api:people:serve`
   - http://localhost:4200/ im Browser öffnen
   - Prüfen ob die Anwendung läuft und Daten angezeigt werden (Navigation: Addresses)
