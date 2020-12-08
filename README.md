@@ -3,6 +3,7 @@
 ### Vorab installierte Software
 
 - NodeJS (https://nodejs.org/en/): bitte aktuelle LTS Version 14.x installieren
+  - danach `npm install -g nx`
 - VSCode (https://code.visualstudio.com/): Fragen zu / Probleme bei anderen IDEs werden im Workshop nicht beantwortet :)
   - Wenn das unten genannte Projekt zum ersten Mal in VSCode geöffnet wird, schlägt es die Installation diverser PLugins vor - bitte "Ja" sagen
 - Stoplight Studio (https://stoplight.io/studio/): Verwenden wir zur Verwaltung der OpenAPI Spec
@@ -14,7 +15,7 @@
 - Git Repo auschecken
 - im ausgecheckten Ordner
   - `npm install`
-  - `nx serve` (bei mir (Tobias) hat nur `npm run nx serve` funktioniert. Aber ich habe auch keine Ahnung davon)
+  - `nx serve`
   - `npm run api:people:serve`
   - http://localhost:4200/ im Browser öffnen
   - Prüfen ob die Anwendung läuft und Daten angezeigt werden (Navigation: Addresses)
