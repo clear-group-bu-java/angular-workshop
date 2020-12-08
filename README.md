@@ -16,7 +16,7 @@
 - im ausgecheckten Ordner
   - `npm install`
   - `nx serve`
-  - `npm run api:people:serve`
+  - auf zweitem Terminal: `npm run api:people:serve`
   - http://localhost:4200/ im Browser öffnen
   - Prüfen ob die Anwendung läuft und Daten angezeigt werden (Navigation: Addresses)
   - Bitte nicht verunsichern lassen, die gestartete fake API ignoriert was man ihr schickt und liefert zufällige Werte zurück. Falls jemand versucht eine Adresse anzulegen ...
