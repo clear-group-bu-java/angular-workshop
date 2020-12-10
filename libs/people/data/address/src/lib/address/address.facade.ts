@@ -20,27 +20,27 @@ export class AddressFacade extends CollectionFacade<Address> {
   }
 
   public load(): void {
-    this.store.dispatch(loadAddresses());
+    this.dispatch(loadAddresses());
   }
 
   public create(address: Address): void {
     const data = { ...address, id: undefined };
-    this.store.dispatch(createAddress({ data }));
+    this.dispatch(createAddress({ data }));
   }
 
   public update(data: Address): void {
-    this.store.dispatch(updateAddress({ data }));
+    this.dispatch(updateAddress({ data }));
   }
 
   public delete(id: string): void {
-    this.store.dispatch(deleteAddress({ id }));
+    this.dispatch(deleteAddress({ id }));
   }
 
   public selectId(selectedId: string): void {
-    this.store.dispatch(selectAddressId({ selectedId }));
+    this.dispatch(selectAddressId({ selectedId }));
   }
 
   public reset(): void {
-    this.store.dispatch(resetAddresses());
+    this.dispatch(resetAddresses());
   }
 }

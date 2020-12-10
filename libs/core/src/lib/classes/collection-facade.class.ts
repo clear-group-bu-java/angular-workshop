@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import { Dictionary, EntityAdapter } from '@ngrx/entity';
 import {
+  Action,
   createSelector,
   MemoizedSelector,
   select,
@@ -59,5 +60,9 @@ export class CollectionFacade<T> {
 
   public select<R>(selector: Selector<object, R>): Observable<R> {
     return this.store.pipe(select(selector));
+  }
+
+  public dispatch(action: Action): void {
+    this.store.dispatch(action);
   }
 }

@@ -1,7 +1,10 @@
 import { Configuration as PeopleApiConfiguration } from '@alten/apis/people';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EffectsModule } from '@ngrx/effects';
 import {
   NavigationActionTiming,
@@ -28,6 +31,9 @@ export function providePeopleApiConfig(
 @NgModule({
   imports: [
     CommonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     StoreModule.forRoot(
       { router: routerReducer },
       {
