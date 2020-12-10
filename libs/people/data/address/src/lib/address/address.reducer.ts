@@ -79,7 +79,6 @@ export const reducer = createReducer(
 
   produceOn(AddressActions.selectAddressId, (state, { selectedId }) => {
     state.selectedId = selectedId;
-    return state;
   }),
 
   on(AddressActions.resetAddresses, () => initialState)
