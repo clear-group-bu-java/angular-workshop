@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should load people 1`] = `
+Array [
+  Object {
+    "addressId": "54321",
+    "cv": "",
+    "email": "test@example.com",
+    "firstName": "Test",
+    "id": "12345",
+    "lastname": "User",
+  },
+]
+`;

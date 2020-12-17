@@ -1,4 +1,4 @@
-import { PeopleService } from '@alten/apis/people';
+import { PeopleService, PersonDto } from '@alten/apis/people';
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,9 +10,11 @@ export class AppComponent {
   public readonly title = 'Demo App';
   public name!: string;
 
+  public people: Array<PersonDto> = [];
+
   constructor(private readonly peopleService: PeopleService) {
     this.peopleService.getPeople().subscribe((people) => {
-      console.log(people);
+      this.people = people;
     });
   }
 }
