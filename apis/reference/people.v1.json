@@ -36,12 +36,52 @@
                   }
                 }
               }
+            },
+            "headers": {
+              "Location": {
+                "schema": {
+                  "type": "string"
+                }
+              }
             }
           }
         },
         "operationId": "get-people",
         "description": "Get all people",
         "parameters": []
+      },
+      "post": {
+        "summary": "",
+        "operationId": "create-person",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Person"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "description": "Create a person",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Person"
+              }
+            }
+          }
+        },
+        "tags": [
+          "people"
+        ]
       }
     },
     "/people/{id}": {
@@ -74,6 +114,46 @@
         },
         "operationId": "get-people-id",
         "description": "Get one Person"
+      },
+      "put": {
+        "summary": "",
+        "operationId": "update-person",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Person"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Person"
+              }
+            }
+          }
+        },
+        "tags": [
+          "people"
+        ]
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-person",
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "tags": [
+          "people"
+        ]
       }
     },
     "/addresses": {
@@ -198,7 +278,8 @@
         },
         "tags": [
           "addresses"
-        ]
+        ],
+        "description": ""
       }
     }
   },
@@ -240,7 +321,8 @@
           "email": {
             "type": "string",
             "format": "email",
-            "x-faker": "internet.email"
+            "x-faker": "internet.email",
+            "minLength": 5
           },
           "birthDate": {
             "type": "string",
