@@ -1,3 +1,4 @@
+import { ContainerComponent } from '@alten/core';
 import { AddressFacade } from '@alten/people/data/address';
 import { Component } from '@angular/core';
 
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './address-list.component.html',
   styleUrls: ['./address-list.component.scss'],
 })
-export class AddressListComponent {
+export class AddressListComponent extends ContainerComponent {
   public readonly columnsToDisplay: ReadonlyArray<string> = [
     'street',
     'number',
@@ -15,5 +16,7 @@ export class AddressListComponent {
     'actions',
   ];
 
-  constructor(public readonly addressFacade: AddressFacade) {}
+  constructor(public readonly addressFacade: AddressFacade) {
+    super();
+  }
 }

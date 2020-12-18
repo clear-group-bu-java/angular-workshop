@@ -225,6 +225,32 @@
           "style": "scss"
         }
       }
+    },
+    "people-data-person": {
+      "projectType": "library",
+      "root": "libs/people/data/person",
+      "sourceRoot": "libs/people/data/person/src",
+      "prefix": "alten",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/people/data/person/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/people/data/person/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

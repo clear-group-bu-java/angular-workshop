@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { PeopleService } from '@alten/apis/people';
+import { PeopleService, PersonDto } from '@alten/apis/people';
 import { mock } from '@alten/core';
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 import { AppComponent } from './app.component';
 
@@ -9,11 +9,11 @@ describe('AppComponent', () => {
   const peopleServiceMock = mock<PeopleService>();
 
   peopleServiceMock.getPeople.mockReturnValue(
-    of(<any>[
+    <Observable<any>>of(<Array<PersonDto>>[
       {
         id: '12345',
         firstName: 'Test',
-        lastname: 'User',
+        lastName: 'User',
         email: 'test@example.com',
         cv: '',
         addressId: '54321',

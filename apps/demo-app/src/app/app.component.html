@@ -18,4 +18,10 @@
 
 <div class="content">
   <router-outlet></router-outlet>
+
+  <button [disabled]="isDenied$ | async">Click me</button>
+
+  <pre>
+    {{ people$ | async | json }}
+  </pre>
 </div>

@@ -7,5 +7,6 @@ module.exports = {
     '<rootDir>/libs/core',
     '<rootDir>/libs/people/views/address',
     '<rootDir>/libs/views/home',
+    '<rootDir>/libs/people/data/person',
   ],
 };

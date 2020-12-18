@@ -40,6 +40,9 @@
     },
     "views-home": {
       "tags": []
+    },
+    "people-data-person": {
+      "tags": []
     }
   }
 }

@@ -25,7 +25,8 @@
       "@alten/people/data/address": ["libs/people/data/address/src/index.ts"],
       "@alten/core": ["libs/core/src/index.ts"],
       "@alten/people/views/address": ["libs/people/views/address/src/index.ts"],
-      "@alten/views/home": ["libs/views/home/src/index.ts"]
+      "@alten/views/home": ["libs/views/home/src/index.ts"],
+      "@alten/people/data/person": ["libs/people/data/person/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

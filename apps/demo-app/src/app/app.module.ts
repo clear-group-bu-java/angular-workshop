@@ -1,5 +1,7 @@
 import { CoreModule } from '@alten/core';
 import { PeopleDataAddressModule } from '@alten/people/data/address';
+import { PeopleDataPersonModule } from '@alten/people/data/person';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -31,6 +33,7 @@ const APP_ROUTES: Routes = [
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    CommonModule,
     RouterModule.forRoot(APP_ROUTES, {
       initialNavigation: 'enabled',
       relativeLinkResolution: 'corrected',
@@ -50,6 +53,7 @@ const APP_ROUTES: Routes = [
     MatToolbarModule,
 
     PeopleDataAddressModule,
+    PeopleDataPersonModule,
     PerformanceDemoModule,
   ],
   providers: [],
